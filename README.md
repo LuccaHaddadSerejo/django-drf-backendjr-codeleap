@@ -22,8 +22,11 @@ $ docker-compose up
 $ http://localhost:8000/api/docs/
 
 # Utilize the endpoints through Postman or Insomnia:
-$ api/https://dev.codeleap.co.uk/careers/
-$ api/https://dev.codeleap.co.uk/careers/:id
+
+# Get or Post:
+$ https://dev.codeleap.co.uk/careers/
+# Patch, Delete:
+$ https://dev.codeleap.co.uk/careers/:id
 ```
 
 ## <h2 id="-requirements">Requisitos do serviço</h2>
