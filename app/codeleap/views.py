@@ -18,7 +18,7 @@ class CodeleapView(ListCreateAPIView):
 class CodeleapDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Codeleap.objects.all()
     serializer_class = CodeleapSerializer
-    lookup_url_kwarg = "codeleap_id"
+    lookup_url_kwarg = "element_id"
 
     def get(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
@@ -28,6 +28,3 @@ class CodeleapDetailView(RetrieveUpdateDestroyAPIView):
 
     def delete(self, request, *args, **kwargs):
         return super().delete(request, *args, **kwargs)
-
-    def put(self, request, *args, **kwargs):
-        return super().put(request, *args, **kwargs)

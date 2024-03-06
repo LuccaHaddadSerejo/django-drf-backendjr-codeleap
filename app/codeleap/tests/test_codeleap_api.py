@@ -30,7 +30,7 @@ class CodeleapTests(TestCase):
             content="Original Content"
         )
 
-        url = reverse('codeleap-detail', kwargs={'codeleap_id': element.id})
+        url = reverse('codeleap-detail', kwargs={'element_id': element.id})
 
         payload = {
             "title": "New Title",
@@ -53,7 +53,7 @@ class CodeleapTests(TestCase):
             content="Original Content"
         )
 
-        url = reverse('codeleap-detail', kwargs={'codeleap_id': element.id})
+        url = reverse('codeleap-detail', kwargs={'element_id': element.id})
         response = self.client.delete(url)
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
