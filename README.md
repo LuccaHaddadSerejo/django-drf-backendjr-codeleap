@@ -1,4 +1,4 @@
-# python-django-backendjr-codeleap
+# Codeleap Technical test
 
 Technical test for Codeleap
 
