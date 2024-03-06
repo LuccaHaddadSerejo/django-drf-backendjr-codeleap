@@ -6,7 +6,7 @@ class Codeleap(models.Model):
     class Meta:
         ordering = ["id"]
 
-    username = models.CharField()
+    username = models.CharField(max_length=255)
     created_datetime = models.DateTimeField(default=timezone.now)
-    title = models.CharField()
-    content = models.CharField()
+    title = models.CharField(max_length=255)
+    content = models.TextField()
