@@ -23,7 +23,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/", include("codeleap.urls")),
+    path("https://dev.codeleap.co.uk/careers/", include("codeleap.urls")),
     path("api/schema/", SpectacularAPIView.as_view(), name="api-schema"),
     path(
          "api/docs/",
