@@ -15,6 +15,10 @@ Django and the db, in case the db initializes after the Django app
 because the app depends on the db to not crash.
 """
 
+"""
+The command will run in docker-compose file, before the migrations
+and the start of the server.
+"""
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
