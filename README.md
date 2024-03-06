@@ -23,12 +23,12 @@ $ http://localhost:8000/api/docs/
 
 # Utilize the endpoints through Postman or Insomnia:
 
+  
 # Get or Post:
-
 $ http://localhost:8000/api/codeleap/career/
 # Patch or Delete:
 $ http://localhost:8000/api/codeleap/career/:id/
-
+  
 
 ## <h2 id="-requirements">Requisitos do serviço</h2>
 
