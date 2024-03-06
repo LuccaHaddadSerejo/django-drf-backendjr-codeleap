@@ -22,4 +22,6 @@ class CodeleapSerializer(serializers.ModelSerializer):
             if key != "username":
                 setattr(instance, key, value)
 
+        instance.save()
+
         return instance
