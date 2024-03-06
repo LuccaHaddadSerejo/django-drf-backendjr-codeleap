@@ -1,13 +1,12 @@
 from rest_framework.generics import ListCreateAPIView, \
                                     RetrieveUpdateDestroyAPIView
+from .models import Codeleap
+from .serializers import CodeleapSerializer
 
-from .models import User
-from .serializers import UserSerializer
 
-
-class UserView(ListCreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+class CodeleapView(ListCreateAPIView):
+    queryset = Codeleap.objects.all()
+    serializer_class = CodeleapSerializer
 
     def get(self, request, *args, **kwargs):
         return super().get(request, *args, **kwargs)
@@ -16,10 +15,10 @@ class UserView(ListCreateAPIView):
         return super().post(request, *args, **kwargs)
 
 
-class UserDetailView(RetrieveUpdateDestroyAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    lookup_url_kwarg = "user_id"
+class CodeleapDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = Codeleap.objects.all()
+    serializer_class = CodeleapSerializer
+    lookup_url_kwarg = "codeleap_id"
 
     def get(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
