@@ -20,6 +20,7 @@ The command will run in docker-compose file, before the migrations
 and the start of the server.
 """
 
+
 class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write('Waiting for database...')
