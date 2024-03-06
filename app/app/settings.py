@@ -42,6 +42,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
+    'drf_spectacular',
 ]
 
 MY_APPS = [
@@ -136,3 +137,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+} 
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Codeleap tech test",
+    "DESCRIPTION": "Technical test for backend jr. in codeleap",
+    "VERSION": "0.1",
+    "SERVE_INCLUDE_SCHEMA": False,
+}
